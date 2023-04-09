@@ -1,0 +1,185 @@
+.title {
+    font-weight: bold;
+    color: blue;
+}
+
+.logo {
+    width: 70%;
+    height: auto;
+}
+
+body {
+    font-family: 'Barlow', 'Lato', 'Raleway', sans-serif;
+    color: #262626;
+    font-size: 16px;
+    background-color: white;
+}
+
+.landing-container {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+head title {
+    font-family: 'Barlow', 'Lato', 'Raleway', sans-serif;
+    font-size: 20px;
+    font-stretch: normal;
+}
+
+header {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 94px auto;
+}
+
+p {
+    font-size: 18px;
+}
+
+.second-container p,
+.fourth-container p {
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+#navbar {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #F27D33;
+    border-bottom: solid 15px #F2B749;
+}
+
+#navbar a {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #F2B749;
+    color: white;
+}
+
+div.main-container {
+    background-color: #A65B2B;
+    width: auto;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'Barlow', 'Lato', 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.section-header {
+    color: #555;
+    text-align: center;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+
+h2 {
+    color: #F27D33;
+}
+
+.prices {
+    font-weight: bold;
+    font-size: large;
+    color: #A65B2B;
+}
+
+.second-container,
+.third-container,
+.fourth-container,
+footer {
+    text-align: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    margin-top: 3rem;
+    background-color: #A65B2B;
+}
+
+.services-container {
+    padding-left: 10em;
+    display: grid;
+    grid-template-columns: 700px;
+    grid-gap: 1em;
+    margin-bottom: 3rem;
+}
+
+.person-card {
+    border: 2px solid #F2B749;
+    border-radius: 16px;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom: 2em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.store-hours {
+    font-weight: bold;
+    color: #A65B2B;
+    padding-top: .5em;
+}
+
+.location-info,
+.pet-title {
+    margin-bottom: 1rem;
+}
+
+.location-title,
+.pet-title {
+    color: #F27D33;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.email-card>input {
+    height: 2rem;
+    width: 20em;
+    margin-bottom: 2em;
+    font-size: 1rem;
+}
+
+.comment-card>textarea {
+    height: 4rem;
+    width: 20em;
+    font-size: 1rem;
+    resize: none;
+}
+
+input[type="submit"] {
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-bottom: 3rem;
+}
