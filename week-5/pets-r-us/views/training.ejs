@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">
+</head>
+
+<body>
+    <%- include('./header.ejs') %>
+
+        <div class="main-container">
+            <h1>Training</h1>
+        </div>
+        <br>
+        <div class="second-container">
+            <p>
+                At Pets-R-Us, we're focused in providing our customers with excellent service in all aspects. We
+                understand that when getting a new pet can be an exciting journey but also stressful. We'd like to help
+                make that journey as stress free as possible. Whether your pet is starting out as a pup or older dog, it
+                is always possible to teach them a trick or two. With our highly marked trainers, they work directly
+                with you and your pet to develop a training program based on their needs and offer you the tools to
+                maintain their training even after they have graduated their program. We offer all sorts of training
+                programs from potty training to obedience training, we have your pet covered to be the best that they
+                can be. Our trainers also ensure that your pet is given the attention they need to succeed by conducting
+                sessions that are one-on one so your pet is the main focus of the trainer. Pets-R-Us ensures that
+                training sessions are conducted in a safe and responsible way as well. Training should be painless and
+                we are a strong believer in that. We believe that training should be a gentle process and we value
+                trainers who see the benefit in gentle training as well.
+            </p>
+            <hr>
+            <br>
+        </div>
+        <div class="services-container">
+            <div class="services-card">
+                <h2>Tier 1</h2>
+                <h3>Potty Training & Basics</h3>
+                <p>
+                    A 5 week long program for puppies to ensure that they know when to signal their owners and go
+                    outside rather than inside along with additional trick training.
+                </p>
+                <div class="prices">$30 for Puppy</div>
+                <div class="prices">$40 for Adolescence</div>
+                <div class="prices">$50 for Adult Dog</div>
+            </div>
+            <div class="services-card">
+                <h2>Tier 2</h2>
+                <h3>Obedience & Manners</h3>
+                <p>
+                    A 5 week long program to ensure disruptive behaviors like biting, jumping, and attacking don't
+                    become habits for your pet.
+                </p>
+                <div class="prices">$30 for Puppy</div>
+                <div class="prices">$40 for Adolescence</div>
+                <div class="prices">$50 for Adult Dog</div>
+            </div>
+            <div class="services-card">
+                <h2>Tier 3</h2>
+                <h3>Leash-Walk & Commands</h3>
+                <p>
+                    A 5 week long program designed to help your pet be able to guide themselves in a well mannered way
+                    with a leash and also be able to respond to commands.
+                </p>
+                <div class="prices">$30 for Puppy</div>
+                <div class="prices">$40 for Adolescence</div>
+                <div class="prices">$50 for Adult Dog</div>
+            </div>
+        </div>
+        <hr>
+        <h1 class="section-header">Meet the Trainer</h1>
+        <div class="trainer-card">
+            <img src="./images/trainer.jpg" alt="trainer" id="trainer-profile">
+            <p>
+                Marc has been a trainer for 7 years and has been a certified trainer that's appeared on many dog
+                training programs. He enjoys working with all types of dogs and likes to ensure owners know the
+                importance of gentle training. In his free time he likes to spend time with his two huskies Kiki and
+                Harlow.
+            </p>
+        </div>
+
+        <%- include('./footer.ejs') %>
+</body>
+
+</html>

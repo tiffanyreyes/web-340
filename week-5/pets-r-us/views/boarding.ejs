@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">
+</head>
+
+<body>
+    <%- include('./header.ejs') %>
+
+        <div class="main-container">
+            <h1>Boarding</h1>
+        </div>
+        <br>
+        <div class="second-container">
+            <p>
+                We understand that even though we would like to have our pets with us everywhere we go, some times we
+                cannot. No worries though because we have you and your pet covered with our state of the art Pet Suites
+                available in a location that is both convenient and near you and your pet. At Pets-R-Us, we like to
+                think of ourselves as your pets' second home. Our Pet Suites are designed with all the comforts and more
+                of their home and we will work with you to make sure you know your pet is in good hands with our
+                amazingly trained team that will be on site 24/7/365. All our Pet Suites are monitored with multi-angled
+                cameras and personally linked to your account so you can see and talk to your pet while you're away.
+                These camera's are available for your specific pets' suite and all common areas. We also know that being
+                away from your pet is hard when you do not know how they are doing, so our pet concierges will be there
+                to follow your pet through their schedule of feeding times, play times, and medications to ensure that
+                your pet is getting the best care possible. For the uttermost safety we also have certified
+                veterinarians with years of experience present so that if anything at all happens we are prepared to
+                keep your pet safe while under our care. We understand that your pet means everything and we hope to be
+                there for you and your pet.
+            </p>
+            <hr>
+        </div>
+        <br>
+        <div class="services-container">
+            <div class="services-card">
+                <h2>5-Night Luxury Pet Suite</h2>
+                <p>
+                    A deluxe suite with tons of amenities including: memory foam beds, deluxe treats, double filtered water, interactive toys, and a TV.
+                </p>
+                <div class="prices">$40 per night for 1 pet</div>
+                <div class="prices">$60 per night for 2 pets</div>
+                <div class="prices">$80 per night for 3 pets</div>
+            </div>
+            <div class="services-card">
+                <h2>7-Night Luxury Pet Suite</h2>
+                <p>
+                    A deluxe suite with tons of amenities including: memory foam beds, deluxe treats, double filtered water, interactive toys, and a TV.
+                </p>
+                <div class="prices">$60 per night for 1 pet</div>
+                <div class="prices">$80 per night for 2 pets</div>
+                <div class="prices">$100 per night for 3 pets</div>
+            </div>
+        </div>
+        <hr>
+
+        <%- include('./footer.ejs') %>
+</body>
+
+</html>
