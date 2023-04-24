@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+    <div class="main-container">
+        <h1>Register</h1>
+    </div>
+    <div class="form">
+        <form action="/customers" method="post">
+            <div class="form-field">
+                <label for="customerId">Customer ID</label>
+                <input class="input" type="text" name="customerId" id="customerId" required autofocus>
+                <br>
+                <br>
+                <label for="customerFirstName">First Name</label>
+                <input class="input" type="text" name="customerFirstName" id="customerFirstName" required>
+                <br>
+                <br>
+                <label for="customerLastName">Last Name</label>
+                <input class="input" type="text" name="customerLastName" id="customerLastName" required>
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <input class="input" type="text" name="email" id="email" required>
+                <br>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Submit" class="btn btn-primary full-width">
+            </div>
+        </form>
+    </div>
+    
+
+
+
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
