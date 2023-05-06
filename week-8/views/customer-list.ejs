@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/styles/site.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">    
+    </head>
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+        <div class="main-container">
+            <h1>Customer List</h1>
+        </div>
+        <br>
+        <br>
+        <div class="customer-container">
+            <% if(customers.length > 0) { %>
+                <table class="customer-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Functions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% customers.forEach(function(customer) { %>
+                        <tr>
+                            <td>
+                                <%= customer.customerFirstName %> <%= customer.customerLastName %>
+                            </td>
+                            <td>
+                                <a href="#">DELETE</a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                <h3>Customers have not been added to the MongoDB database.  Try adding some!</h3>
+                <% } %>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

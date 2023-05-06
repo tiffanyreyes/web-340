@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+
+        <div class="main-container">
+            <h1>Book Your Appointment!</h1>
+        </div>
+        <div class="appointment-card">
+            <div class="form">
+                <form action="/appointment" method="post">
+                    <div class="form-field">
+                        <label for="userName">Username:</label>
+                        <input class="input" type="text" name="userName" id="userName" required autofocus>
+                        <br>
+                        <br>
+                        <label for="firstName">First Name:</label>
+                        <input class="input" type="text" name="firstName" id="firstName" required>
+                        <br>
+                        <br>
+                        <label for="lastName">Last Name:</label>
+                        <input class="input" type="text" name="lastName" id="lastName" required>
+                        <br>
+                        <br>
+                        <label for="email">Email:</label>
+                        <input class="input" type="text" name="email" id="email" required>
+                        <p class="inline-help">ex. johnsmith@yahoo.com</p>
+                        <br>
+                        <br>
+                        <label for="service">Select a service:</label>
+                        <select class="service-box" name="service" id="services">
+                            <% services.forEach((service)=> { %>
+                                <option value="'<%= service.value %>'">
+                                    <%= service.text %>
+                                </option>
+                                <% }) %>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" value="Book Appointment" class="btn btn-primary full-width">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
