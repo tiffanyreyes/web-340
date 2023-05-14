@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/styles/site.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300;400;900&family=Raleway:wght@300;400&display=swap">
+    </head>
+    <body>
+        <%- include('./partials/header.ejs') %>
+    
+        <div class="main-container">
+            <h1>My Appointments</h1>
+        </div>
+
+        <div class="appointment-card">
+            <div class="form">
+                <form>
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input class="input" type="text" name="email" id="email">
+                        <p class="inline-help">ex. johnsmith@yahoo.com</p>
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" value="Search" id="search" class="btn btn-primary full-width">
+                    </div>
+                </form>
+
+                <div id="appointments"></div>
+            </div>
+        </div>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+
+    <script>
+        document.getElementById('search').onclick = function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            fetch('/api/appointments/' + email)
+                .then(res => res.json())
+                .then(data => {
+                    let tableString = `
+                        <br/>
+                        <h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; font-weight: lighter">My Appointments</h4>
+                        <table id="appointments" class="appointment-table">
+                            <thead>
+                                <tr>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Service</th>
+                                </tr>
+                            </thead>
+                            <tbody>`;
+
+                    for (let appointment of data) {
+                        tableString += `
+                            <tr>
+                                <td>${appointment.firstName}</td>
+                                <td>${appointment.lastName}</td>
+                                <td>${appointment.email}</td>
+                                <td>${appointment.service}</td>
+                            </tr>`;
+                    }
+
+                    tableString += `</tbody></table>`;
+
+                    document.getElementById('appointments').innerHTML = tableString;
+                });
+        }
+    </script>
+</html>
